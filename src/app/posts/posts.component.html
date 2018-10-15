@@ -1,0 +1,18 @@
+<h1>QUOTES</h1>
+
+
+<form>
+  <input type="text" placeholder="name"  #name>
+  <input type="textbox" placeholder="quote" #quote>
+  <button class="send" type="submit" (click)="sendData()">OK</button>
+</form>
+
+<ul class="animated fadeIn">
+  <li *ngFor="let post of posts$">
+    <a>{{ post.name }}</a>
+
+    <ul>
+      <li>{{ post.quote }}</li>
+    </ul>
+  </li>
+</ul>
